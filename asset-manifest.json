@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/React-Searchbar/static/css/main.aaf253cc.css",
+    "main.js": "/React-Searchbar/static/js/main.52424982.js",
+    "static/js/787.d08b6292.chunk.js": "/React-Searchbar/static/js/787.d08b6292.chunk.js",
+    "index.html": "/React-Searchbar/index.html",
+    "main.aaf253cc.css.map": "/React-Searchbar/static/css/main.aaf253cc.css.map",
+    "main.52424982.js.map": "/React-Searchbar/static/js/main.52424982.js.map",
+    "787.d08b6292.chunk.js.map": "/React-Searchbar/static/js/787.d08b6292.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aaf253cc.css",
+    "static/js/main.52424982.js"
+  ]
+}
