@@ -8,26 +8,26 @@ class App extends React.Component {
     super();
 
     this.state = {
-      monsters: [],
+      users: [],
     };
   }
 
   componentDidMount() {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
-      .then((users) => this.setState({ monsters: users }));
+      .then((users) => this.setState({ users: users }));
   }
 
   render() {
     return (
       <div className="App">
-        <CardList name='Gadzo'/>
-        {this.state.monsters.map((monster) => (
-          <h1 key={monster.id}> {monster.name} </h1>
-        ))}
+        <input type='search' placeholder='Search for users'/>
+        <CardList users={this.state.users}/>
+          
       </div>
     );
   }
 }
 
 export default App;
+
