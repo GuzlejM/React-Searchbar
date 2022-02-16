@@ -1,4 +1,6 @@
 import React from "react";
+
+import { CardList } from "./components/card-list/card-list.component";
 import "./App.css";
 
 class App extends React.Component {
@@ -6,20 +8,7 @@ class App extends React.Component {
     super();
 
     this.state = {
-      monsters: [
-        {
-          name: "Frankenstein",
-          id: 1,
-        },
-        {
-          name: "Dracula",
-          id: 2,
-        },
-        {
-          name: "Zombie",
-          id: 3,
-        },
-      ],
+      monsters: [],
     };
   }
 
@@ -32,6 +21,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <CardList name='Gadzo'/>
         {this.state.monsters.map((monster) => (
           <h1 key={monster.id}> {monster.name} </h1>
         ))}
