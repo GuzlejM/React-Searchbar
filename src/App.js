@@ -17,14 +17,18 @@ class App extends React.Component {
   componentDidMount() {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
-      .then((users) => this.setState({ users: users }));
+      .then((users) => this.setState({ users: users }))
+      .then((users) => console.log(this.state.users))
   }
 
   render() {
     const { users, searchField } = this.state;
-    const filteredUsers = users.filter((user) =>
-      user.name.toLowerCase().includes(searchField.toLowerCase())
-    );
+    const filteredUsers = users.filter((user) => {
+      return Object.values(user)
+        .join("")
+        .toLowerCase()
+        .includes(searchField.toLowerCase());
+    });
     return (
       <div className="App">
         <h1>NFT USERS</h1>
