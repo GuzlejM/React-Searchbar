@@ -9,6 +9,7 @@ class App extends React.Component {
 
     this.state = {
       users: [],
+      searchField: ''
     };
   }
 
@@ -21,7 +22,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <input type='search' placeholder='Search for users'/>
+        <input onChange={e => this.setState({ searchField: e.target.value }, () => console.log(this.state))} type='search' placeholder='Search for users'/>
         <CardList users={this.state.users}/>
           
       </div>
