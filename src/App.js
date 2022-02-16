@@ -9,18 +9,24 @@ class App extends React.Component {
       monsters: [
         {
           name: "Frankenstein",
-          id: 1
+          id: 1,
         },
         {
           name: "Dracula",
-          id: 2
+          id: 2,
         },
         {
           name: "Zombie",
-          id: 3
+          id: 3,
         },
       ],
     };
+  }
+
+  componentDidMount() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((users) => this.setState({ monsters: users }));
   }
 
   render() {
